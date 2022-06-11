@@ -23,7 +23,7 @@ docker pull nicopaez/passwordapi-java:java8-fabric
         },
 ```
 
-### Se observa que docker inspect nicopaez/passwordapi-java:java8-fabric tiene 9 layers
+### Se observa que nicopaez/passwordapi-java:java8-fabric tiene 9 layers
 
 `docker inspect nicopaez/passwordapi-java:java8-fabric`
 
