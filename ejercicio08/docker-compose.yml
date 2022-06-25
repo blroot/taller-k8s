@@ -1,0 +1,17 @@
+version: '3'
+services:
+  balancer:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - api1
+      - api2
+  api1:
+    image: nicopaez/password-api:latest
+    expose:
+      - 3000
+  api2:
+    image: nicopaez/password-api:latest
+    expose:
+      - 3000
