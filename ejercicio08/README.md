@@ -4,7 +4,11 @@
 
 `docker-compose up -d`
 
-Y acceder a `[localhost:8080](http://localhost:8080)`
+Y acceder a [localhost:8080](http://localhost:8080)
+
+### Para parar el ejercicio
+
+`docker-compose stop`
 
 ### Detalles
 
