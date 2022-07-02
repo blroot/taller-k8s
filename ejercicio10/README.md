@@ -15,7 +15,7 @@ botardo   1/1     1            1           5m14s
 
 # Se le pide la versión al bot
 
-![botardo](Screenshot from 2022-07-02 12-48-25.jpg "Botardo")
+![botardo](https://github.com/blroot/taller-k8s/blob/master/ejercicio10/Screenshot%20from%202022-07-02%2012-48-25.jpg "Botardo")
 
 # Finalmente se destruye el deployment
 
