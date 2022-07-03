@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pingapp
+  labels:
+    app: pingapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pingapp
+  template:
+    metadata:
+      labels:
+        app: pingapp
+    spec:
+      containers:
+      - name: pingapp
+        image: nicopaez/pingapp:2.1.0
+        env:
+          - name: CONFIG_LOCATION
+            valueFrom:
+              configMapKeyRef:
+                name: configmap1
+                key: CONFIG_LOCATION
+          - name: SECRETS_LOCATION
+            valueFrom:
+              configMapKeyRef:
+                name: configmap1
+                key: SECRETS_LOCATION
+        volumeMounts:
+          - name: configmap2-volume
+            mountPath: "/mydata"
+          - name: secret1-volume
+            mountPath: "/mysecrets"
+      volumes:
+        - name: configmap2-volume
+          configMap:
+            name: configmap2
+        - name: secret1-volume
+          secret:
+            secretName: secret1
