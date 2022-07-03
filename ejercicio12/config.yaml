@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jobvacancyconfig
+data:
+  RACK_ENV: "production"
+  PORT: "3000"
